@@ -1,0 +1,20 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD .//EM"
+"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>	
+  <session-factory>
+	<property name="connection.url">jdbc:mysql://localhost:3306/estacionamento</property>
+	<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+	<property name="connection.username">root</property>
+	<property name="connection.password">12345</property>
+	<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+	<property name="hibernate.current_session_context_class">thread</property>
+    
+    <property name="hbm2ddl.auto">update</property>
+	<property name="show_sql">true</property>
+	<property name="format_sql">true</property>
+
+	<mapping class="com.easypark.vraptor4.model.entity.Vaga"/>
+  </session-factory>	
+</hibernate-configuration>
